@@ -1,7 +1,7 @@
 FROM centos
-RUN yum install epel-release python3-pip -y && pip3 install flask
+RUN yum install epel-release python3-pip python3 -y && pip3 install flask
 WORKDIR /python
-ADD app.py ./
-ENTRYPOINT [ "python3" ]
-CMD ["app.py"]
+ADD * ./
+RUN chmod +x ./bash.sh
+ENTRYPOINT [ "./bash.sh" ]
 EXPOSE 5000
