@@ -4,4 +4,4 @@ WORKDIR /python
 ADD * ./
 RUN chmod +x ./bash.sh
 ENTRYPOINT [ "./bash.sh" ]
-EXPOSE 5000
+EXPOSE 80
